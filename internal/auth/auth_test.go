@@ -14,7 +14,7 @@ func TestGetAPIKey(t *testing.T) {
 		want      string
 		wantErr   error
 	}{
-		"simple":                     {"ApiKey test", "test", nil},
+		"simple":                     {"ApiKy test", "test", nil},
 		"no Auth header":             {"nothing", "", ErrNoAuthHeaderIncluded},
 		"empty auth header":          {"", "", ErrNoAuthHeaderIncluded},
 		"does not start with ApiKey": {"nokey test", "", errors.New("malformed authorization header")},
